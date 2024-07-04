@@ -29,11 +29,15 @@ func (z zag) stats() {
 	fmt.Println(z.nome)
 	fmt.Println(z.clube)
 	fmt.Println(z.pos)
-	fmt.Println("Total de Jogos:", z.jogos)
-	fmt.Println("Gols por jogo:", z.gols/z.jogos)
-	fmt.Println("Asists por jogo:", z.assists/z.jogos)
-	fmt.Println("Desarmes por jogo:", z.desarmes/z.jogos)
-	fmt.Println("Cabeceio por jogo:", z.cabec/z.jogos)
+	mediaAss := z.assists/z.jogos
+	mediaGols := z.gols/z.jogos
+	mediaDes := z.desarmes/z.jogos
+	mediaCabec := z.cabec/z.jogos
+	fmt.Println("Total de Jogos: ", z.jogos)
+	fmt.Printf("Gols por jogo: %2.2f \n", mediaGols)
+	fmt.Printf("Asists por jogo: %2.2f \n", mediaAss )
+	fmt.Printf("Desarmes por jogo: %2.2f \n", mediaDes )
+	fmt.Printf("Cabeceio por jogo: %2.2f \n", mediaCabec )
 }
 
 type meia struct {
@@ -47,11 +51,15 @@ func (m meia) stats() {
 	fmt.Println(m.nome)
 	fmt.Println(m.clube)
 	fmt.Println(m.pos)
-	fmt.Println("Total de Jogos:", m.jogos)
-	fmt.Println("Gols por jogo:", m.gols/m.jogos)
-	fmt.Println("Asists por jogo:", m.assists/m.jogos)
-	fmt.Println("Desarmes por jogo:", m.desarmes/m.jogos)
-	fmt.Println("Passes por jogo:", m.passes/m.jogos)
+	mediaAss := m.assists/m.jogos
+	mediaGols := m.gols/m.jogos
+	mediaDes := m.desarmes/m.jogos
+	mediaPass := m.passes/m.jogos
+	fmt.Println("Total de Jogos: ", m.jogos)
+	fmt.Printf("Gols por jogo: %2.2f \n", mediaGols)
+	fmt.Printf("Asists por jogo: %2.2f \n", mediaAss )
+	fmt.Printf("Desarmes por jogo: %2.2f \n", mediaDes )
+	fmt.Printf("Passes por jogo: %2.2f \n", mediaPass )
 }
 
 func statsJogador(j jogador) {
@@ -69,11 +77,15 @@ func (a atacante) stats() {
 	fmt.Println(a.nome)
 	fmt.Println(a.clube)
 	fmt.Println(a.pos)
-	fmt.Println("Total de Jogos:", a.jogos)
-	fmt.Println("Gols por jogo:", a.gols/a.jogos)
-	fmt.Println("Asists por jogo:", a.assists/a.jogos)
-	fmt.Println("Chute por jogo:", a.chutes/a.jogos)
-	fmt.Println("Drible por jogo:", a.dribles/a.jogos)
+	mediaAss := a.assists/a.jogos
+	mediaGols := a.gols/a.jogos
+	mediaChutes := a.chutes/a.jogos
+	mediaDribles := a.dribles/a.jogos
+	fmt.Println("Total de Jogos: ", a.jogos)
+	fmt.Printf("Gols por jogo: %2.2f \n", mediaGols)
+	fmt.Printf("Asists por jogo: %2.2f \n", mediaAss )
+	fmt.Printf("Chute por jogo: %2.2f \n", mediaChutes )
+	fmt.Printf("Drible por jogo: %2.2f \n", mediaDribles )
 }
 
 func main() {
