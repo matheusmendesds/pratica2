@@ -26,6 +26,7 @@ type zag struct {
 }
 
 func (z zag) stats() {
+	fmt.Println("-----------------------")
 	fmt.Println(z.nome)
 	fmt.Println(z.clube)
 	fmt.Println(z.pos)
@@ -48,6 +49,7 @@ type meia struct {
 }
 
 func (m meia) stats() {
+	fmt.Println("----------------")
 	fmt.Println(m.nome)
 	fmt.Println(m.clube)
 	fmt.Println(m.pos)
@@ -74,6 +76,7 @@ type atacante struct {
 }
 
 func (a atacante) stats() {
+	fmt.Println("----------------")
 	fmt.Println(a.nome)
 	fmt.Println(a.clube)
 	fmt.Println(a.pos)
